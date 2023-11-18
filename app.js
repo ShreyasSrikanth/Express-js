@@ -10,6 +10,8 @@ const contactRoutes = require("./routes/contact");
 
 app.use(bodyParser.urlencoded({extended:false}));
 
+app.use(express.static(path.join(__dirname,"public")));
+
 app.use("/admin",adminRoutes);
 app.use(shopRoutes);
 app.use("/contact",contactRoutes);
