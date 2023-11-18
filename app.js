@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 
 app.use("/admin",adminRoutes);
 app.use(shopRoutes);
-app.use(contactRoutes);
+app.use("/contact",contactRoutes);
 
 app.use((req,res,next) =>{
     res.status(404).sendFile(path.join(__dirname,'views','pagenotfound.html'));
